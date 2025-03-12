@@ -1,0 +1,199 @@
+version: "3.1"
+# nlu.yml--> Defines intents (what the user wants) and examples of user input.
+nlu:
+- intent: open_youtube
+  examples: |
+    - open YouTube
+    - launch YouTube
+    - start YouTube
+    - play a video on YouTube
+    - go to YouTube
+    - I want to watch YouTube
+    - Can you open YouTube?
+    - Please start YouTube for me
+    - YouTube please
+    - Play something on YouTube
+
+- intent: open_spotify
+  examples: |
+    - open Spotify
+    - start Spotify
+    - launch Spotify
+    - play music on Spotify
+    - I want to listen to songs on Spotify
+
+- intent: open_whatsapp
+  examples: |
+    - open Whatsapp
+    - start Whatsapp
+    - launch Whatsapp
+    - Go on Whatsapp
+    - I want to chat on Whatsapp
+
+- intent: web_search
+  examples: |
+    - search for [anything](query)
+    - google [something](query)
+    - find information about [whatever I want](query)
+    - look up [any topic](query)
+    - search Google for [this query](query)
+    - search [cats](query)
+    - find [recipes](query)
+    - google [Java tutorials](query)
+
+- intent: get_weather
+  examples: |
+    - What's the weather like in [Pune](location)?
+    - Tell me the weather in [Kolhapur](location).
+    - Show me the temperature in [Mumbai](location).
+    - How's the weather in [Lucknow](location)?
+    - Weather in [Nagpur](location)?
+    - Is it sunny in [Nashik](location)?
+    - Is it raining in [Kolkata](location)?
+    - What is the temperature in [Delhi](location)?
+    - How's the weather in [Chennai](location)?
+    - Tell me the weather in [Hyderabad](location).
+    
+- lookup: location  # ✅ Lookup table (if used)
+  examples: |
+    - Pune
+    - Mumbai
+    - Kolhapur  
+
+- intent: general_question
+  examples: |
+    - What is the capital of India?
+    - Who is the President of the United States?
+    - How many continents are there?
+    - What is the speed of light?
+    - When was Google founded?
+    - what is the population of india?
+    - Translate "Hello" into Spanish?
+    - how many states arein india?
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - what's up?
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - take care
+    - have a great day
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - sure
+    - absolutely
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really
+    - I don't think so
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - wonderful
+    - I am feeling very good
+    - I am great
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: fallback
+  examples: |
+    - Sorry, I didn't understand that.
+    - Can you please repeat?
+    - I don't know what you mean.
+    - I'm not sure how to respond.
+
+# ----------------------------------
+# date 11/03/2025
+
+- intent: ask_name
+  examples: |
+    - What's your name?
+    - Who are you?
+    - Tell me your name
+    - What should I call you?
+    - Do you have a name? 
+
+- intent: thank_you
+  examples: |
+    - Thanks!
+    - Thank you so much
+    - Appreciate it!
+    - Thanks a lot
+    - Thanks for helping me
+    - I really appreciate it
+    - Cheers!
+
+- intent: help
+  examples: |
+    - I need help.
+    - Can you assist me?
+    - I am stuck, what should I do?
+    - Help me with this issue.
+    - I don’t understand, please help.
+    - What can you help me with?
+    - I need some guidance.
+    - Can you explain how this works?
+    - I'm lost, please assist me.
+    - Give me some help, please.
+
+- intent: ask_joke
+  examples: |
+    - Tell me a joke
+    - Can you make me laugh?
+    - Give me a funny joke
+    - I need a joke
+    - Make me smile
+
+- intent: ask_fact
+  examples: |
+    - Tell me a fun fact
+    - Give me an interesting fact
+    - Do you know any cool facts?
+    - Share some knowledge with me
+
+# -------------------------------------------
+# date 12/03/2025
+- intent: get_time
+  examples: |
+    - What's the time in [Tokyo](location)?
+    - Tell me the time in [Sydney](location).
+    - What is the local time in [Delhi](location)?
+    - Show me the current time in [London](location).
+    - Can you tell me the time in [Dubai](location)?
+
+regex:
+  - name: location
+    pattern: "(?i)[A-Za-z]+(?:[\\s-][A-Za-z]+)*"
